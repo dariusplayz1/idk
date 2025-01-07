@@ -89,7 +89,7 @@ local ESP; ESP = {
         Object_Maximal_Distance = 1000,
         Highlight = {Enabled = false, Color = Color3.new(1, 0, 0), Target = ""},
         Box = {Enabled = false, Color = Color3.new(1, 1, 1), Transparency = 0},
-        Box_Outline = {Enabled = false, Color = Color3.new(0, 0, 0), Transparency = 0, Outline_Size = 1},
+        Box_Outline = {Enabled = false, Color = Color3.new(0, 0, 0), Transparency = 0, Outline_Size = 2},
         Healthbar = {Enabled = false, Position = "Left", Color = Color3.new(1, 1, 1), Color_Lerp = Color3.fromRGB(40, 252, 3)},
         Name = {Enabled = false, Position = "Top", Color = Color3.new(1, 1, 1), Transparency = 0, OutlineColor = Color3.new(0, 0, 0)},
         Distance = {Enabled = false, Position = "Bottom", Color = Color3.new(1, 1, 1), Transparency = 0, OutlineColor = Color3.new(0, 0, 0)},
@@ -665,10 +665,10 @@ do -- ESP Functions
             self:GetObject(Instance):Destroy()
         end
         local Components = Object.Components
-        Components.Box_Outline = Framework:Draw("Square", {Thickness = 5, ZIndex = 1})
-        Components.Box = Framework:Draw("Square", {Thickness = 1, ZIndex = 2})
-        Components.Healthbar_Outline = Framework:Draw("Square", {Thickness = 3, ZIndex = 1, Filled = true})
-        Components.Healthbar = Framework:Draw("Square", {Thickness = 1, ZIndex = 2, Filled = true})
+        Components.Box_Outline = Framework:Draw("Square", {Thickness = 3})
+        Components.Box = Framework:Draw("Square", {Thickness = 1})
+        Components.Healthbar_Outline = Framework:Draw("Square", {Thickness = 3, Filled = true})
+        Components.Healthbar = Framework:Draw("Square", {Thickness = 1, Filled = true})
         Components.NameBold = Framework:Draw("Text", {Text = Instance.Name, Font = 2, Size = 13, Center = true})
         Components.Name = Framework:Draw("Text", {Text = Instance.Name, Font = 2, Size = 13, Outline = true, Center = true})
         Components.DistanceBold = Framework:Draw("Text", {Font = 2, Size = 13, Center = true})
