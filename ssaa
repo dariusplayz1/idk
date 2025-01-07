@@ -13,14 +13,14 @@
 ]]
 
 -- // Variables
-local ws = game:GetService("Workspace")
-local uis = game:GetService("UserInputService")
-local rs = game:GetService("RunService")
-local hs = game:GetService("HttpService")
-local cas = game:GetService("ContextActionService")
-local plrs = game:GetService("Players")
-local stats = game:GetService("Stats")
-local core = game:GetService("CoreGui")
+local ws = cloneref(game:GetService("Workspace"))
+local uis = cloneref(game:GetService("UserInputService"))
+local rs = cloneref(game:GetService("RunService"))
+local hs = cloneref(game:GetService("HttpService"))
+local cas = cloneref(game:GetService("ContextActionService"))
+local plrs = cloneref(game:GetService("Players"))
+local stats = cloneref(game:GetService("Stats"))
+local core = cloneref(game:GetService("CoreGui"))
 local dt = DateTime.now()
 --
 local localplayer = plrs.LocalPlayer
